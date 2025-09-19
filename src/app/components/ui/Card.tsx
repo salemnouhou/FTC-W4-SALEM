@@ -2,8 +2,8 @@
 "use client"
 import React from "react";
 import clsx from "clsx";
-import { ImageWithSkeleton } from "./ImageWithSkeleton";
 import { CardProps } from "@/app/types/card";
+import Image from "next/image";
 
 /**
  * Composant Card - Carte polyvalente avec plusieurs variantes
@@ -68,7 +68,7 @@ const Card: React.FC<CardProps> = ({
           <div className="flex lg:gap-6 items-center gap-4">
             <div className=" h-[58px] rounded-[10px] w-[58px] lg:h-[70px] lg:w-[70px] ">
               {testimonyImage && (
-                <ImageWithSkeleton
+                <Image
                   src={testimonyImage}
                   alt={testimonyAuthor || "Author"}
                   width={40}
@@ -92,7 +92,7 @@ const Card: React.FC<CardProps> = ({
 
         <div className="bg-gray-100  h-[325px] md:h-[307px] relative rounded-[10.16px]  overflow-hidden">
           {image && benefitType === "first" && (
-            <ImageWithSkeleton
+            <Image
               src={image}
               alt="title"
               width={320}
@@ -102,7 +102,7 @@ const Card: React.FC<CardProps> = ({
             />
           )}
           {image && benefitType === "second" && (
-            <ImageWithSkeleton
+            <Image
               src={image}
               alt="title"
               width={320}
@@ -113,7 +113,7 @@ const Card: React.FC<CardProps> = ({
 
 
           {image && benefitType === "third" && (
-            <ImageWithSkeleton
+            <Image
               src={image}
               alt="title"
               width={320}
@@ -141,7 +141,7 @@ const Card: React.FC<CardProps> = ({
       <div>
         <div className="bg-gray-100  h-[325px] md:h-[307px] relative rounded-[10.16px]  overflow-hidden">
           {image && (
-            <ImageWithSkeleton
+            <Image
               src={image}
               alt="title"
               width={320}
@@ -164,7 +164,7 @@ const Card: React.FC<CardProps> = ({
 
         <div className="  w-[259px]  h-[258px] sm:h-[200px] sm:w-[200px]  md:h-[225px] md:w-[225px] relative rounded-[10.16px]  ">
           {image && (
-            <ImageWithSkeleton
+            <Image
               src={image}
               alt="title"
               width={320}
@@ -197,7 +197,7 @@ const Card: React.FC<CardProps> = ({
 
         <div className="  w-[319px]  h-[211px]  relative   ">
           {image && (
-            <ImageWithSkeleton
+            <Image
               src={image}
               alt="title"
               width={320}
